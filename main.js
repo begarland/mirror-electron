@@ -19,12 +19,12 @@ function createWindow() {
   window.contentView.addChildView(view1);
 
   // Load a file from the attached React Vite FE
-  // view1.webContents.loadFile("frontend-vite/dist/index.html");
+  view1.webContents.loadFile("frontend-vite/dist/index.html");
 
 
 
-  // Load an already existing webpage
-  view1.webContents.loadURL("https://screenresolutiontest.com/screenresolution/");
+  // // Load an already existing webpage
+  // view1.webContents.loadURL("https://screenresolutiontest.com/screenresolution/");
 }
 
 
