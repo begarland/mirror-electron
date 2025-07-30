@@ -10,7 +10,6 @@ const returnGreeting = (hrs: number): string => {
 };
 
 const GreetingMessage = () => {
-  console.log("new Date().getHours()", new Date().getHours());
   const [hr, setHr] = useState(new Date().getHours());
 
   useEffect(() => {
