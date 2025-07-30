@@ -3,7 +3,7 @@ import DigitalClock from "./components/DigitalClock";
 
 function App() {
   return (
-    <div className="bg-[#222222] h-screen w-screen flex flex-col justify-start items-start relative over">
+    <div className="bg-[#222222] h-screen w-screen flex flex-col justify-start items-start relative overflow-hidden">
       <div className="w-screen flex justify-end pt-2 pe-2">
         <DigitalClock />
       </div>
