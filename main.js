@@ -15,13 +15,17 @@ function createWindow() {
 
   const view1 = new WebContentsView();
   window.contentView.addChildView(view1);
+
+
   view1.setBounds({ x: 0, y: 0, width, height });
 
   // Load a file from the attached React Vite FE
   view1.webContents.loadFile("frontend-vite/dist/index.html");
 
+
+
   // Load an already existing webpage
-  view1.webContents.loadURL("https://www.google.com/");
+  view1.webContents.loadURL("https://screenresolutiontest.com/screenresolution/");
 }
 
 app.whenReady().then(() => {
