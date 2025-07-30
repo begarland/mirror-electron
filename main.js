@@ -9,20 +9,17 @@ const electron = require("electron");
 const path = require("node:path");
 
 function createWindow() {
-  // create a fullscreen window
-  // const { width, height } = electron.screen.getPrimaryDisplay().workAreaSize;
-  const height = 1080
-  const width = 1920
-  const window = new BaseWindow({ width, height });
+  let window = new BrowserWindow({
+        // Other options for your window, e.g., width, height
+        fullscreen: true, // This is the key for full-screen
+        autoHideMenuBar: true // Optional: Hides the menu bar in full-screen
+      });
 
   const view1 = new WebContentsView();
   window.contentView.addChildView(view1);
 
-
-  view1.setBounds({ x: 0, y: 0, width, height });
-
   // Load a file from the attached React Vite FE
-  view1.webContents.loadFile("frontend-vite/dist/index.html");
+  // view1.webContents.loadFile("frontend-vite/dist/index.html");
 
 
 
@@ -30,10 +27,9 @@ function createWindow() {
   view1.webContents.loadURL("https://screenresolutiontest.com/screenresolution/");
 }
 
-app.whenReady().then(() => {
-  const mainWindow = createWindow();
 
-  mainWindow.setFullScreen(true);
+app.whenReady().then(() => {
+  createWindow();
 
   app.on("activate", () => {
     if (BrowserWindow.getAllWindows().length === 0) {
