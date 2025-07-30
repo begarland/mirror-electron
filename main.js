@@ -9,7 +9,7 @@ const electron = require("electron");
 const path = require("node:path");
 
 function createWindow() {
-  letwindow = new BrowserWindow({
+  let window = new BrowserWindow({
         // Other options for your window, e.g., width, height
         fullscreen: true, // This is the key for full-screen
         autoHideMenuBar: true // Optional: Hides the menu bar in full-screen
@@ -19,7 +19,7 @@ function createWindow() {
   window.contentView.addChildView(view1);
 
 
-  view1.setBounds({ x: 0, y: 0, width: 1920, height: 1080 });
+  view1.setBounds({ x: 0, y: 0, width: 1920, height:1080 });
 
   // Load a file from the attached React Vite FE
   view1.webContents.loadFile("frontend-vite/dist/index.html");
