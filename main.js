@@ -10,7 +10,9 @@ const path = require("node:path");
 
 function createWindow() {
   // create a fullscreen window
-  const { width, height } = electron.screen.getPrimaryDisplay().workAreaSize;
+  // const { width, height } = electron.screen.getPrimaryDisplay().workAreaSize;
+  const height = 1080
+  const width = 1920
   const window = new BaseWindow({ width, height });
 
   const view1 = new WebContentsView();
