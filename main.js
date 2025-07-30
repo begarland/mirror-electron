@@ -25,7 +25,9 @@ function createWindow() {
 }
 
 app.whenReady().then(() => {
-  createWindow();
+  const mainWindow = createWindow();
+
+  mainWindow.setFullScreen(true);
 
   app.on("activate", () => {
     if (BrowserWindow.getAllWindows().length === 0) {
