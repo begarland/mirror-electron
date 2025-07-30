@@ -1,7 +1,7 @@
 npm i
 
 cd frontend-vite
-npm i
+npm i --force
 npm run build
 
 cd ..
