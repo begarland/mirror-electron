@@ -27,7 +27,7 @@ function createWindow() {
 
 
   // Load an already existing webpage
-  view1.webContents.loadURL("https://screenresolutiontest.com/screenresolution/");
+  // view1.webContents.loadURL("https://screenresolutiontest.com/screenresolution/");
 }
 
 
