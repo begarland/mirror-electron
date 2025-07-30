@@ -23,7 +23,7 @@ const GreetingMessage = () => {
     return () => clearInterval(intervalId);
   }, []); // Empty dependency array ensures effect runs only once on mount
 
-  return <>{returnGreeting(hr)} Charlie</>;
+  return <>{returnGreeting(hr)}, Charlie</>;
 };
 
 export default GreetingMessage;
