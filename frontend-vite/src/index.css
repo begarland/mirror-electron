@@ -1,7 +1,145 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-* {
-  cursor: none;
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.rainbow-text-animated {
+  background: linear-gradient(
+    to right,
+    #6666ff,
+    #0099ff,
+    #00ff00,
+    #ff3399,
+    #6666ff
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow-animation 6s ease-in-out infinite;
+  background-size: 400% 100%;
+}
+
+@keyframes rainbow-animation {
+  0%,
+  100% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 100% 0;
+  }
+}
+
+.theme-gradient {
+  background: linear-gradient(
+    -45deg,
+    #d72638,
+    #f46036,
+    #ffd23f,
+    #44af69,
+    #1985a1,
+    #564787,
+    #6c2dc7,
+    #564787,
+    #1985a1,
+    #44af69,
+    #ffd23f,
+    #f46036,
+    #d72638
+  );
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .theme-gradient {
+    background: linear-gradient(
+      -45deg,
+      #6c2dc7,
+      #564787,
+      #1985a1,
+      #44af69,
+      #ffd23f,
+      #f46036,
+      #d72638,
+      #f46036,
+      #ffd23f,
+      #44af69,
+      #1985a1,
+      #564787,
+      #6c2dc7,
+      #564787,
+      #1985a1,
+      #44af69,
+      #ffd23f,
+      #f46036,
+      #d72638,
+      #f46036,
+      #ffd23f,
+      #44af69,
+      #1985a1,
+      #564787,
+      #6c2dc7,
+      #564787,
+      #1985a1,
+      #44af69,
+      #ffd23f,
+      #f46036,
+      #d72638
+    );
+    background-size: 400% 400%;
+    animation: gradient 25s ease infinite;
+    height: 100%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
