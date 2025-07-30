@@ -10,4 +10,4 @@ Electron with Vite Sample app
 
 **Run in electron app (no hot reload):**
 
-`bash scripts/launch-electron.sh`
+`DISPLAY=:0 bash scripts/launch-electron.sh`
