@@ -21,7 +21,7 @@ function createWindow() {
   view1.webContents.loadFile("frontend-vite/dist/index.html");
 
   // Load an already existing webpage
-  // view1.webContents.loadURL("https://www.google.com/");
+  view1.webContents.loadURL("https://www.google.com/");
 }
 
 app.whenReady().then(() => {
