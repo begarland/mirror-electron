@@ -1,5 +1,6 @@
 import AnalogClock from "./components/AnalogClock";
 import DigitalClock from "./components/DigitalClock";
+import GreetingMessage from "./components/GreetingMessage";
 
 function App() {
   return (
@@ -11,7 +12,9 @@ function App() {
         </div>
       </div>
       <div className="w-screen h-[80vw] flex flex-col justify-end items-center pb-10">
-        <h1 className="text-7xl text-white">Good Morning Charlie</h1>
+        <h1 className="text-7xl text-white">
+          <GreetingMessage />
+        </h1>
       </div>
     </div>
   );
