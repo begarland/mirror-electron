@@ -3,9 +3,11 @@
 @tailwind utilities;
 
 * {
-  cursor: none;
+  /* cursor: none; */
 }
 
 *::-webkit-scrollbar {
   display: none;
 }
+
+
