@@ -51,10 +51,15 @@ const CurrentWeather = () => {
       temp_max: 0,
       temp_min: 0,
     },
+    sys: {
+      sunrise: 1754049439,
+      sunset: 1754100880,
+    },
   });
 
   useEffect(() => {
     fetchData();
+    const interval = setInterval(() => fetchData(), 60000);
 
     async function fetchData() {
       const weather = await fetchCurrentWeather();
@@ -62,7 +67,26 @@ const CurrentWeather = () => {
       console.log("weather", weather);
       setCurrentWeather(weather);
     }
+    return () => {
+      clearInterval(interval);
+    };
   }, []);
+
+  const sunrise = new Date(
+    currentWeather?.sys.sunrise * 1000
+  ).toLocaleTimeString([], {
+    hour: "numeric",
+    minute: "numeric",
+    hour12: true,
+  });
+  const sunset = new Date(currentWeather?.sys.sunset * 1000).toLocaleTimeString(
+    [],
+    {
+      hour: "numeric",
+      minute: "numeric",
+      hour12: true,
+    }
+  );
 
   return (
     <>
@@ -75,7 +99,7 @@ const CurrentWeather = () => {
               </p>
 
               <div className="flex justify-center items-center -mt-4 -mb-4">
-                <p className="text-white font-bold font-chalk text-3xl w-2/3 me-3">
+                <p className="text-white font-bold font-feltPen text-5xl w-2/3 me-3">
                   {currentWeather?.weather?.[0].main}
                 </p>
                 <img
@@ -85,8 +109,8 @@ const CurrentWeather = () => {
               </div>
             </div>
             <div className="flex justify-center items-center border-b-4 border-b-[#ffd23f]"></div>
-            <div className="flex justify- items-center border-b-4 border-b-[#44af69] p-2">
-              <div className="text-white text-2x p-2 gap-4 flex ">
+            <div className="flex items-center border-b-4 border-b-[#44af69] p-2">
+              <div className="text-white text-2x p-2 gap-4 flex">
                 <p className="text-4xl font-chalkboard text-slate-300 underline">
                   The current temperature is:
                 </p>
@@ -100,6 +124,20 @@ const CurrentWeather = () => {
                 >
                   {currentWeather?.main?.feels_like?.toFixed(0)}&deg;
                 </p>
+              </div>
+            </div>
+            <div className="flex gap-4 items-center border-b-4 border-b-[#564787] p-2">
+              <div className="w-1/2 flex flex-col justify-center items-center">
+                <p className="text-white text-4xl underline font-chalkboard">
+                  Sunrise:
+                </p>
+                <p className="text-white text-3xl font-feltPen">{sunrise}</p>
+              </div>
+              <div className="w-1/2 flex flex-col justify-center items-center border-s-4 border-s-[#1985a1]">
+                <p className="text-white text-4xl underline font-chalkboard">
+                  Sunset:
+                </p>
+                <p className="text-white text-3xl font-feltPen">{sunset}</p>
               </div>
             </div>
           </>

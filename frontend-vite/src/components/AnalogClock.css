@@ -1,0 +1,27 @@
+.react-clock__hand__body,
+.react-clock__mark__body {
+  background-color: #222222;
+}
+
+.react-clock__face {
+  border: 3px solid #222222;
+}
+
+.react-clock__second-hand__body {
+  background: linear-gradient(
+    -45deg,
+    #d72638,
+    #f46036,
+    #ffd23f,
+    #44af69,
+    #1985a1,
+    #564787,
+    #6c2dc7,
+    #564787,
+    #1985a1,
+    #44af69,
+    #ffd23f,
+    #f46036,
+    #d72638
+  );
+}

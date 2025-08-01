@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Clock from "react-clock";
 import "react-clock/dist/Clock.css";
+import "./AnalogClock.css";
 
 const AnalogClock = () => {
   const [value, setValue] = useState(new Date());
@@ -14,7 +15,9 @@ const AnalogClock = () => {
   }, []);
 
   return (
-    <Clock value={value} renderNumbers className="bg-white rounded-full" />
+    <div className="flex justify-center items-center mt-12">
+      <Clock size={"300px"} value={value} renderNumbers />
+    </div>
   );
 };
 
