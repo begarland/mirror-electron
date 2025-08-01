@@ -114,16 +114,15 @@
 }
 
 @font-face {
-  font-family: "Nabana"; /* Choose a name for your font */
-  src: url("./fonts/Nabana-ShadowBold.ttf") format("truetype"); /* Adjust path and format */
+  font-family: "BubbleStacked"; /* Choose a name for your font */
+  src: url("./fonts/Bubble-Stacked.otf") format("truetype"); /* Adjust path and format */
   font-weight: normal;
   font-style: normal;
 }
 
-.font-nabana {
-  font-family: "Nabana", sans-serif;
+.font-bubblestacked {
+  font-family: "BubbleStacked", sans-serif;
 }
-
 
 @font-face {
   font-family: "DailyCroquete"; /* Choose a name for your font */
@@ -134,4 +133,70 @@
 
 .font-dailycroquete {
   font-family: "DailyCroquete", sans-serif;
+}
+
+@font-face {
+  font-family: "danki"; /* Choose a name for your font */
+  src: url("./fonts/danki.otf") format("truetype"); /* Adjust path and format */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-danki {
+  font-family: "danki", sans-serif;
+}
+
+@font-face {
+  font-family: "easterChalk"; /* Choose a name for your font */
+  src: url("./fonts/easter-chalk.ttf") format("truetype"); /* Adjust path and format */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-chalk {
+  font-family: "easterChalk", sans-serif;
+}
+
+@font-face {
+  font-family: "FriendlyMonster"; /* Choose a name for your font */
+  src: url("./fonts/FriendlyMonster.otf") format("truetype"); /* Adjust path and format */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-monster {
+  font-family: "FriendlyMonster", sans-serif;
+}
+
+@font-face {
+  font-family: "KittyPaw"; /* Choose a name for your font */
+  src: url("./fonts/KittyPaw.otf") format("truetype"); /* Adjust path and format */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-kittypaw {
+  font-family: "KittyPaw", sans-serif;
+}
+
+@font-face {
+  font-family: "Nabana"; /* Choose a name for your font */
+  src: url("./fonts/Nabana-ShadowBold.ttf") format("truetype"); /* Adjust path and format */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-nabana {
+  font-family: "Nabana", sans-serif;
+}
+
+@font-face {
+  font-family: "TextbookCharlie"; /* Choose a name for your font */
+  src: url("./fonts/Textbook-Charlie.ttf") format("truetype"); /* Adjust path and format */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-textbook {
+  font-family: "TextbookCharlie", sans-serif;
 }

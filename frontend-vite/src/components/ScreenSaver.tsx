@@ -7,8 +7,8 @@ const ScreenSaver: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const sleep = 9;
 
   // console.log(hr, wakeUp, sleep);
-  const saveScreen = hr <= wakeUp || hr >= sleep;
-  // const saveScreen = false;
+  // const saveScreen = hr <= wakeUp || hr >= sleep;
+  const saveScreen = false;
 
   useEffect(() => {
     // Setup the interval when the component mounts
