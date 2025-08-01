@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchCurrentWeather, fetchTodaysForecast } from "../api/weather";
+import { fetchCurrentWeather } from "../api/weather";
 
 const tempToColor = {
   0: "#6c2dc7", // freezing cold
