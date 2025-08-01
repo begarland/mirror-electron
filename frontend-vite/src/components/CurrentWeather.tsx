@@ -20,8 +20,6 @@ const CurrentWeather = () => {
     }
   }, []);
 
-  console.log("currentWeather", currentWeather);
-
   return (
     <>
       {currentWeather ? (

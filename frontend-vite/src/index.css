@@ -112,3 +112,26 @@
     background-position: 0% 50%;
   }
 }
+
+@font-face {
+  font-family: "Nabana"; /* Choose a name for your font */
+  src: url("./fonts/Nabana-ShadowBold.ttf") format("truetype"); /* Adjust path and format */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-nabana {
+  font-family: "Nabana", sans-serif;
+}
+
+
+@font-face {
+  font-family: "DailyCroquete"; /* Choose a name for your font */
+  src: url("./fonts/Daily-Croquete.otf") format("truetype"); /* Adjust path and format */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-dailycroquete {
+  font-family: "DailyCroquete", sans-serif;
+}

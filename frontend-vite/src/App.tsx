@@ -5,6 +5,7 @@ import HourCalendar from "./components/HourCalendar";
 import ScreenSaver from "./components/ScreenSaver";
 import CurrentWeather from "./components/CurrentWeather";
 import TodayIs from "./components/TodayIs";
+import "./fonts/Nabana-ShadowBold.ttf";
 
 export const ThemeContext = createContext({
   primaryColor: "bg-green-600",
@@ -25,7 +26,7 @@ function App() {
           </div>
           <CurrentWeather />
           <div className="w-screen h-[80vw] flex flex-col justify-end items-center pb-10">
-            <h1 className="text-7xl text-white">
+            <h1 className="text-7xl text-white font-dailycroquete">
               <GreetingMessage />
             </h1>
             <HourCalendar />

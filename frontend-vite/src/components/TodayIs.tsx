@@ -32,7 +32,7 @@ const TodayIs = () => {
 
   return (
     <div className="text-white">
-      <p>{WEEK[day]}</p>
+      <p className="text-9xl font-dailycroquete">{WEEK[day]}</p>
       <p>
         {MONTH[month]} {date} {year}
       </p>
