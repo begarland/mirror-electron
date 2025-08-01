@@ -15,7 +15,7 @@ function App() {
     <ThemeContext.Provider value={{ primaryColor: "bg-green-600" }}>
       <ScreenSaver>
         <div className="bg-black h-screen w-screen flex justify-start items-start relative overflow-hidden">
-          <div className="w-4/5 flex justify-center items-end h-screen mb-24">
+          <div className="w-4/5 flex justify-center items-end h-screen mb-36">
             <h1 className="text-7xl text-white font-dailycroquete">
               <GreetingMessage />
             </h1>
