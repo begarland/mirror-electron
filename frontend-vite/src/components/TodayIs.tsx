@@ -31,10 +31,13 @@ const TodayIs = () => {
   const year = today.getFullYear();
 
   return (
-    <div className="text-white">
-      <p className="text-9xl font-dailycroquete">{WEEK[day]}</p>
-      <p>
-        {MONTH[month]} {date} {year}
+    <div className="text-white p-4 flex flex-col gap-1">
+      <p className="text-5xl font-chalkboard">Today is...</p>
+      <p className="text-9xl font-dailycroquete theme-gradient-text ">
+        {WEEK[day]}
+      </p>
+      <p className="text-7xl font-textbook">
+        {MONTH[month]} {date}, {year}
       </p>
     </div>
   );

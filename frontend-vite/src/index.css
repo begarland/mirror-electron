@@ -59,6 +59,31 @@
   height: 100%;
 }
 
+.theme-gradient-text {
+  background: linear-gradient(
+    -45deg,
+    #d72638,
+    #f46036,
+    #ffd23f,
+    #44af69,
+    #1985a1,
+    #564787,
+    #6c2dc7,
+    #564787,
+    #1985a1,
+    #44af69,
+    #ffd23f,
+    #f46036,
+    #d72638
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100%;
+}
+
 @media screen and (max-width: 767px) {
   .theme-gradient {
     background: linear-gradient(
@@ -147,6 +172,27 @@
 }
 
 @font-face {
+  font-family: "digital-dream"; /* Choose a name for your font */
+  src: url("./fonts/digital-dream.ttf") format("truetype"); /* Adjust path and format */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-digital {
+  font-family: "digital-dream", sans-serif;
+}
+
+@font-face {
+  font-family: "ChalkBoard"; /* Choose a name for your font */
+  src: url("./fonts/ChalkBoard.ttf") format("truetype"); /* Adjust path and format */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-chalkboard {
+  font-family: "ChalkBoard", sans-serif;
+}
+@font-face {
   font-family: "easterChalk"; /* Choose a name for your font */
   src: url("./fonts/easter-chalk.ttf") format("truetype"); /* Adjust path and format */
   font-weight: normal;
@@ -169,6 +215,39 @@
 }
 
 @font-face {
+  font-family: "Handodle"; /* Choose a name for your font */
+  src: url("./fonts/Handodle.ttf") format("truetype"); /* Adjust path and format */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-handodle {
+  font-family: "Handodle", sans-serif;
+}
+
+@font-face {
+  font-family: "HeyBetty"; /* Choose a name for your font */
+  src: url("./fonts/HeyBetty.ttf") format("truetype"); /* Adjust path and format */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-heyBetty {
+  font-family: "HeyBetty", sans-serif;
+}
+
+@font-face {
+  font-family: "HigherJump"; /* Choose a name for your font */
+  src: url("./fonts/HigherJump.otf") format("truetype"); /* Adjust path and format */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-higherJump {
+  font-family: "HigherJump", sans-serif;
+}
+
+@font-face {
   font-family: "KittyPaw"; /* Choose a name for your font */
   src: url("./fonts/KittyPaw.otf") format("truetype"); /* Adjust path and format */
   font-weight: normal;
@@ -188,6 +267,28 @@
 
 .font-nabana {
   font-family: "Nabana", sans-serif;
+}
+
+@font-face {
+  font-family: "Rockybilly"; /* Choose a name for your font */
+  src: url("./fonts/Rockybilly.ttf") format("truetype"); /* Adjust path and format */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-textbook {
+  font-family: "Rockybilly", sans-serif;
+}
+
+@font-face {
+  font-family: "seagullpen"; /* Choose a name for your font */
+  src: url("./fonts/seagullpen.otf") format("truetype"); /* Adjust path and format */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-feltPen {
+  font-family: "seagullpen", sans-serif;
 }
 
 @font-face {
