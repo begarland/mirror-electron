@@ -18,13 +18,15 @@ function App() {
           <div className="w-screen flex justify-end">
             <div className="flex flex-col">
               <TodayIs />
-              <div className="flex flex-col justify-center">
+              <div className="flex flex-col justify-center border-y-4 p-4 border-t-[#d72638] border-b-[#f46036] ">
                 <DigitalClock />
               </div>
+              <div className="flex flex-col justify-start"></div>
+              <CurrentWeather />
             </div>
           </div>
           <div className="w-screen flex justify-start pt-5 ps-5"></div>
-          <CurrentWeather />
+
           <div className="w-screen h-[80vw] flex flex-col justify-end items-center pb-10">
             <h1 className="text-7xl text-white font-dailycroquete">
               <GreetingMessage />

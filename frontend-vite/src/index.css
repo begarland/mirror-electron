@@ -140,7 +140,7 @@
 
 @font-face {
   font-family: "BubbleStacked"; /* Choose a name for your font */
-  src: url("./fonts/Bubble-Stacked.otf") format("truetype"); /* Adjust path and format */
+  src: url("./fonts/Bubble-Stacked.ttf") format("truetype"); /* Adjust path and format */
   font-weight: normal;
   font-style: normal;
 }
