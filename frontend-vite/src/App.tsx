@@ -1,7 +1,6 @@
 import { createContext } from "react";
 import DigitalClock from "./components/DigitalClock";
 import GreetingMessage from "./components/GreetingMessage";
-import HourCalendar from "./components/HourCalendar";
 import ScreenSaver from "./components/ScreenSaver";
 import CurrentWeather from "./components/CurrentWeather";
 import TodayIs from "./components/TodayIs";
