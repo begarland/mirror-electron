@@ -42,7 +42,7 @@ const CurrentWeather = () => {
         {currentWeather ? (
           <>
             <div className="text-white m-4 ">
-              <p className="text-4xl font-chalkboard text-slate-300">
+              <p className="text-4xl font-chalkboard text-slate-300 underline">
                 The current forecast is...
               </p>
 
@@ -57,17 +57,33 @@ const CurrentWeather = () => {
               </div>
             </div>
             <div className="flex justify-center items-center border-b-4 border-b-[#ffd23f]"></div>
-            <div className="flex justify-center items-center border-b-4 border-b-[#44af69]">
-              <div className="w-1/4"></div>
-              <div className="w-2/4">
-                <div className="text-white text-2xl text-center">
-                  <p className="font-chalkboard">Feels like:</p>
-                  <p className="font-feltPen">
+            <div className="flex justify-center items-center border-b-4 border-b-[#44af69] p-2">
+              <div className="w-1/3 ">
+                <div className="text-white text-2xl text-center p-2">
+                  <p className="font-chalkboard text-3xl underline">Feels like:</p>
+                  <p className="font-feltPen text-6xl">
                     {currentWeather?.main?.feels_like?.toFixed(0)}
                   </p>
                 </div>
               </div>
-              <div className="w-1/4"></div>
+              <div className="w-1/3 border-x-[#222222] border-x-4">
+                <div className="text-white text-2xl text-center p-2">
+                  <p className="font-chalkboard text-3xl underline">Low:</p>
+                  <p className="font-feltPen text-6xl">
+                    {currentWeather?.main?.temp_min?.toFixed(0)}
+                  </p>
+                </div>
+              </div>
+
+              <div className="w-1/3">
+                {" "}
+                <div className="text-white text-2xl text-center p-2">
+                  <p className="font-chalkboard text-3xl underline">High:</p>
+                  <p className="font-feltPen text-6xl">
+                    {currentWeather?.main?.temp_max?.toFixed(0)}
+                  </p>
+                </div>
+              </div>
             </div>
           </>
         ) : (
