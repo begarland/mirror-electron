@@ -5,6 +5,5 @@ export const fetchCurrentWeather = async () => {
 
   const data = await currentWeather.json();
 
-  console.log("currentWeather", data);
   return data;
 };

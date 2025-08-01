@@ -1,5 +1,33 @@
 import { useEffect, useState } from "react";
-import { fetchCurrentWeather } from "../api/weather";
+import { fetchCurrentWeather, fetchTodaysForecast } from "../api/weather";
+
+const tempToColor = {
+  0: "#6c2dc7", // freezing cold
+  32: "#564787", // freezing point
+  50: "#1985a1", // chilly
+  68: "#44af69", // mild
+  80: "#ffd23f", // warm
+  90: "#f46036", // hot
+  100: "#d72638", // very hot
+};
+
+function getTempColor(temp: string) {
+  if (Number(temp) <= 0) {
+    return tempToColor[0];
+  } else if (Number(temp) > 0 && Number(temp) <= 32) {
+    return tempToColor[32];
+  } else if (Number(temp) > 32 && Number(temp) <= 50) {
+    return tempToColor[50];
+  } else if (Number(temp) > 50 && Number(temp) <= 68) {
+    return tempToColor[68];
+  } else if (Number(temp) > 68 && Number(temp) <= 80) {
+    return tempToColor[80];
+  } else if (Number(temp) > 80 && Number(temp) <= 90) {
+    return tempToColor[90];
+  } else if (Number(temp) > 90) {
+    return tempToColor[100];
+  }
+}
 
 const CurrentWeather = () => {
   const [currentWeather, setCurrentWeather] = useState({
@@ -57,32 +85,21 @@ const CurrentWeather = () => {
               </div>
             </div>
             <div className="flex justify-center items-center border-b-4 border-b-[#ffd23f]"></div>
-            <div className="flex justify-center items-center border-b-4 border-b-[#44af69] p-2">
-              <div className="w-1/3 ">
-                <div className="text-white text-2xl text-center p-2">
-                  <p className="font-chalkboard text-3xl underline">Feels like:</p>
-                  <p className="font-feltPen text-6xl">
-                    {currentWeather?.main?.feels_like?.toFixed(0)}
-                  </p>
-                </div>
-              </div>
-              <div className="w-1/3 border-x-[#222222] border-x-4">
-                <div className="text-white text-2xl text-center p-2">
-                  <p className="font-chalkboard text-3xl underline">Low:</p>
-                  <p className="font-feltPen text-6xl">
-                    {currentWeather?.main?.temp_min?.toFixed(0)}
-                  </p>
-                </div>
-              </div>
-
-              <div className="w-1/3">
-                {" "}
-                <div className="text-white text-2xl text-center p-2">
-                  <p className="font-chalkboard text-3xl underline">High:</p>
-                  <p className="font-feltPen text-6xl">
-                    {currentWeather?.main?.temp_max?.toFixed(0)}
-                  </p>
-                </div>
+            <div className="flex justify- items-center border-b-4 border-b-[#44af69] p-2">
+              <div className="text-white text-2x p-2 gap-4 flex ">
+                <p className="text-4xl font-chalkboard text-slate-300 underline">
+                  The current temperature is:
+                </p>
+                <p
+                  className="font-feltPen text-6xl w-full text-center mt-2"
+                  style={{
+                    color:
+                      getTempColor(currentWeather?.main?.temp?.toFixed(0)) ??
+                      "white",
+                  }}
+                >
+                  {currentWeather?.main?.feels_like?.toFixed(0)}&deg;
+                </p>
               </div>
             </div>
           </>
@@ -90,34 +107,6 @@ const CurrentWeather = () => {
           <></>
         )}
       </>
-
-      {currentWeather ? (
-        <div className="flex flex-col items-center">
-          <div className="current-weather-body">
-            <div className="current-temp-and-feels-like-container">
-              <h3 className="current-temp">
-                {currentWeather?.main?.temp?.toFixed(0)}
-              </h3>
-              <p className="feels-like">
-                Feels like: {currentWeather?.main?.feels_like?.toFixed(0)}
-              </p>
-            </div>
-            <div className="icon-and-weather-container"></div>
-            <div className="high-low-container">
-              <p className="high-low high">
-                <span className="bold desc">High:</span>{" "}
-                {currentWeather?.main?.temp_max?.toFixed(0)}
-              </p>
-              <p className="high-low low">
-                <span className="bold desc">Low:</span>{" "}
-                {currentWeather?.main?.temp_min?.toFixed(0)}
-              </p>
-            </div>
-          </div>
-        </div>
-      ) : (
-        <></>
-      )}
     </>
   );
 };
