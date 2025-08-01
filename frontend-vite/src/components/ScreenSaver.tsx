@@ -6,7 +6,7 @@ const ScreenSaver: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const wakeUp = 6;
   const sleep = 9;
 
-  // console.log(hr, wakeUp, sleep);
+  console.log(hr, wakeUp, sleep);
   // const saveScreen = hr <= wakeUp || hr >= sleep;
   const saveScreen = false;
 
