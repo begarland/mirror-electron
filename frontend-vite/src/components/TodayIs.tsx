@@ -1,9 +1,43 @@
-const TodayIs = () => {
-    return (
-      <>
-        
-      </>
-    )
-}
+const WEEK = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
 
-export default TodayIs
+const MONTH = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+const TodayIs = () => {
+  const today = new Date();
+  const day = today.getDay();
+  const date = today.getDate();
+  const month = today.getMonth();
+  const year = today.getFullYear();
+
+  return (
+    <div className="text-white">
+      <p>{WEEK[day]}</p>
+      <p>
+        {MONTH[month]} {date} {year}
+      </p>
+    </div>
+  );
+};
+
+export default TodayIs;
