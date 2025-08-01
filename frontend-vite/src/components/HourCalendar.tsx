@@ -5,9 +5,7 @@ const HourCalendar = () => {
   const [hr, setHr] = useState(new Date().getHours());
   const [min, setMin] = useState(new Date().getMinutes());
 
-  console.log("min", min);
-
-  const hours = Array.from({ length: 23 }, (_, index) => index);
+  const hours = Array.from({ length: 24 }, (_, index) => index);
 
   useEffect(() => {
     // Setup the interval when the component mounts
@@ -29,20 +27,19 @@ const HourCalendar = () => {
     <div className="w-[1440px] text-white rounded-lg flex flex-row justify-center py-4">
       {hours.map((hour) => {
         return (
-          <>
-            <div
-              className={`w-20 border flex justify-center ${
-                hour >= wakeUp && hour < bedTime ? primaryColor : ""
-              }`}
-            >
-              {hour}
-            </div>
-          </>
+          <div
+            key={hour}
+            className={`w-[60px] border flex justify-center ${
+              hour >= wakeUp && hour < bedTime ? primaryColor : ""
+            }`}
+          >
+            {hour}
+          </div>
         );
       })}
       <div
         className="absolute text-white bottom-0 h-[50px]"
-        style={{ left: `${(hr * 60) + (min)}px` }}
+        style={{ left: `${hr * 60 + min}px` }}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
