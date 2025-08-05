@@ -1,10 +1,11 @@
 .react-clock__hand__body,
 .react-clock__mark__body {
-  background-color: #222222;
+  background-color: #ffffff;
+  color: white;
 }
 
 .react-clock__face {
-  border: 3px solid #222222;
+  border: 3px solid #ffffff;
 }
 
 .react-clock__second-hand__body {
@@ -24,4 +25,9 @@
     #f46036,
     #d72638
   );
+}
+
+
+.react-clock__mark__number {
+  color: white;
 }

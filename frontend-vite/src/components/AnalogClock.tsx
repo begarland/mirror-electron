@@ -15,8 +15,8 @@ const AnalogClock = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center mt-8">
-      <Clock size={"200px"} value={value} renderNumbers />
+    <div className="flex justify-center items-center mt-8 text-white">
+      <Clock size={"300px"} value={value} renderNumbers />
     </div>
   );
 };
