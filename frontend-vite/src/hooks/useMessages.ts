@@ -3,7 +3,9 @@ import { useEffect, useState } from "react";
 export const useMessages = () => {
   const [messages, setMessages] = useState<
     { message: string; createdAt: number; ttl?: number }[]
-  >([{ message: "message one", createdAt: Date.now(), ttl: 30000 }]);
+  >([
+    { message: "Happy Friday Charlie!", createdAt: Date.now(), ttl: 14400000 },
+  ]);
 
   const addMessage = (newMessage: {
     message: string;
