@@ -238,7 +238,7 @@
 
 @font-face {
   font-family: "HigherJump"; /* Choose a name for your font */
-  src: url("./fonts/HigherJump.otf") format("truetype"); /* Adjust path and format */
+  src: url("./fonts/HigherJump.ttf") format("truetype"); /* Adjust path and format */
   font-weight: normal;
   font-style: normal;
 }
@@ -276,7 +276,7 @@
   font-style: normal;
 }
 
-.font-textbook {
+.font-rockybilly {
   font-family: "Rockybilly", sans-serif;
 }
 

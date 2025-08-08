@@ -5,24 +5,29 @@ import ScreenSaver from "./components/ScreenSaver";
 import CurrentWeather from "./components/CurrentWeather";
 import TodayIs from "./components/TodayIs";
 import AnalogClock from "./components/AnalogClock";
+import { useMessages } from "./hooks/useMessages";
 
 export const ThemeContext = createContext({
   primaryColor: "bg-green-600",
 });
 
 function App() {
+  const { messages } = useMessages();
+
   return (
     <ThemeContext.Provider value={{ primaryColor: "bg-green-600" }}>
       <ScreenSaver>
         <div className="bg-black h-screen w-screen flex justify-start items-start relative overflow-hidden">
-          <div className="flex flex-col h-screen">
-            <div className="h-2/6 w-4/6 flex justify-center items-end mb-36">
-              <h1 className="text-9xl text-white font-dailycroquete">
-                It's time to read books!
-              </h1>
+          <div className="w-full flex flex-col h-screen">
+            <div className="h-5/6 w-full flex justify-center items-start mt-24">
+              {messages.map((msg) => (
+                <h2 className="text-7xl text-white font-textbook">
+                  {msg.message}
+                </h2>
+              ))}
             </div>
 
-            <div className="h-2/6 w-4/6 flex justify-center items-end mb-36">
+            <div className="h-1/6 w-full flex justify-center items-end mb-24">
               <h1 className="text-7xl text-white font-dailycroquete">
                 <GreetingMessage />
               </h1>
