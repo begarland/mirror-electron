@@ -4,7 +4,7 @@ export const useMessages = () => {
   const [messages, setMessages] = useState<
     { message: string; createdAt: number; ttl?: number }[]
   >([
-    { message: "Happy Friday Charlie!", createdAt: Date.now(), ttl: 14400000 },
+    { message: "Happy Saturday Charlie!", createdAt: Date.now(), ttl: 14400000 },
   ]);
 
   const addMessage = (newMessage: {
