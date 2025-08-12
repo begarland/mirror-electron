@@ -1,3 +1,5 @@
+import { useDate } from "../hooks/useDate";
+
 const WEEK = [
   "Sunday",
   "Monday",
@@ -24,11 +26,7 @@ const MONTH = [
 ];
 
 const TodayIs = () => {
-  const today = new Date();
-  const day = today.getDay();
-  const date = today.getDate();
-  const month = today.getMonth();
-  const year = today.getFullYear();
+  const { date, month, year, day } = useDate();
 
   return (
     <div className="text-white p-4 flex flex-col gap-1">
