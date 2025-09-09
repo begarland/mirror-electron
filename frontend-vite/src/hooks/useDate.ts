@@ -4,10 +4,10 @@ export const useDate = () => {
   const [today, setToday] = useState<Date>(new Date());
 
   useEffect(() => {
-    setInterval(() => {
-      setToday(new Date());
-    }, 300000);
-  });
+    // setInterval(() => {
+    setToday(new Date());
+    // }, 300000);
+  }, [setToday]);
 
   const day = today.getDay();
   const date = today.getDate();
