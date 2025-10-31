@@ -34,7 +34,7 @@ const TodayIs = () => {
       <p className="text-8xl font-dailycroquete theme-gradient-text ">
         {WEEK[day]}
       </p>
-      <p className="text-7xl font-textbook">
+      <p className="text-6xl font-textbook">
         {MONTH[month]} {date}, {year}
       </p>
     </div>
