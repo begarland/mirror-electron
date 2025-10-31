@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export const useMessages = () => {
   const [messages, setMessages] = useState<
@@ -13,21 +13,21 @@ export const useMessages = () => {
     setMessages([...messages, newMessage]);
   };
 
-  useEffect(() => {
-    setInterval(() => {
-      removeExpired();
-    }, 10000);
+  // useEffect(() => {
+  //   setInterval(() => {
+  //     removeExpired();
+  //   }, 10000);
 
-    function removeExpired() {
-      const now = Date.now();
+  //   function removeExpired() {
+  //     const now = Date.now();
 
-      setMessages(
-        messages.filter((msg) =>
-          msg.ttl ? now - msg.createdAt < msg.ttl : true
-        )
-      );
-    }
-  }, [messages]);
+  //     setMessages(
+  //       messages.filter((msg) =>
+  //         msg.ttl ? now - msg.createdAt < msg.ttl : true
+  //       )
+  //     );
+  //   }
+  // }, [messages]);
 
   return {
     messages,
