@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { useDate } from "../hooks/useDate";
 
 const WEEK = [
@@ -26,7 +27,20 @@ const MONTH = [
 ];
 
 const TodayIs = () => {
-  const { date, month, year, day } = useDate();
+  // const { date, month, year, day } = useDate();
+
+  const [today, setToday] = useState<Date>(new Date());
+
+  useEffect(() => {
+    setInterval(() => {
+      setToday(new Date());
+    }, 300000);
+  });
+
+  const day = today.getDay();
+  const date = today.getDate();
+  const month = today.getMonth();
+  const year = today.getFullYear();
 
   return (
     <div className="text-white p-4 flex flex-col gap-1">
