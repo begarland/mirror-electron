@@ -29,13 +29,13 @@ const MONTH = [
 const TodayIs = () => {
   // const { date, month, year, day } = useDate();
 
-  const [today, setToday] = useState<Date>(new Date());
+  const [today, ] = useState<Date>(new Date());
 
-  useEffect(() => {
+  // useEffect(() => {
     // setInterval(() => {
-    setToday(new Date());
+    // setToday(new Date());
     // }, 300000);
-  }, []);
+  // }, []);
 
   const day = today.getDay();
   const date = today.getDate();
