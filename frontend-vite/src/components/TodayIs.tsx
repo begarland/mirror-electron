@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 // import { useDate } from "../hooks/useDate";
 
 const WEEK = [

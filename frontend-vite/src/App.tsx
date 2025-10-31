@@ -4,7 +4,7 @@ import GreetingMessage from "./components/GreetingMessage";
 import ScreenSaver from "./components/ScreenSaver";
 import CurrentWeather from "./components/CurrentWeather";
 import TodayIs from "./components/TodayIs";
-import AnalogClock from "./components/AnalogClock";
+// import AnalogClock from "./components/AnalogClock";
 import { useMessages } from "./hooks/useMessages";
 
 export const ThemeContext = createContext({
