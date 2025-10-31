@@ -41,7 +41,7 @@ function App() {
               </div>
               <div className="flex flex-col justify-start"></div>
               <CurrentWeather />
-              <AnalogClock />
+              {/* <AnalogClock /> */}
             </div>
           </div>
         </div>
