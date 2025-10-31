@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useDate } from "../hooks/useDate";
+// import { useDate } from "../hooks/useDate";
 
 const WEEK = [
   "Sunday",
@@ -32,10 +32,10 @@ const TodayIs = () => {
   const [today, setToday] = useState<Date>(new Date());
 
   useEffect(() => {
-    setInterval(() => {
-      setToday(new Date());
-    }, 300000);
-  });
+    // setInterval(() => {
+    setToday(new Date());
+    // }, 300000);
+  }, []);
 
   const day = today.getDay();
   const date = today.getDate();
